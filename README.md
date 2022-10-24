@@ -53,7 +53,7 @@ We used [this site][reference] as reference.
 [reference]: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
 
 ```bash
-# Upgrade installe packages
+# Upgrade installed packages
 sudo apt update
 sudo apt upgrade
 # Install git
