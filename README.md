@@ -66,4 +66,7 @@ cd ubuntu_wordpress
 chmod 700 *.sh
 # Install nginx
 ./install_nginx.sh
+# Create web sites
+./create_site.sh audisoft.test
+./create_site.sh henutsen.test
 ```
