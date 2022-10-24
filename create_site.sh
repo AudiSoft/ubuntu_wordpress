@@ -20,3 +20,4 @@ echo "        location / {"                                        >> /etc/nginx
 echo "                try_files $uri $uri/ =404;"                  >> /etc/nginx/sites-available/$1
 echo "        }"                                                   >> /etc/nginx/sites-available/$1
 echo "}"                                                           >> /etc/nginx/sites-available/$1
+sudo chown root:root /etc/nginx/sites-available/$1
