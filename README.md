@@ -18,7 +18,7 @@ Processors                  |2
 Enable EFI                  |Yes
 Hard disk size              |100.00 GB
 Pre-allocate Full Size      |No
-Settings->Network->Adapter1 |Bridget Adapter->Wireless Network Adapter
+Settings->Network->Adapter1 |Bridged Adapter->Wireless Network Adapter
 
 ### Linux installation
 
