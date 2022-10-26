@@ -69,4 +69,11 @@ chmod 700 *.sh
 # Create web sites
 ./create_site.sh audisoft.test
 ./create_site.sh henutsen.test
+
+sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/
+
+#Install php
+sudo apt install php-cli
+sudo apt install php-fpm
+
 ```
