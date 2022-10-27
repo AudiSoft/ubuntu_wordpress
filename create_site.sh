@@ -1,7 +1,7 @@
 #!/bin/bash
 # Define variables
-$Path_available = /etc/nginx/sites-available/
-$Path_nginx_conf = /etc/nginx/nginx.conf
+Path_available = /etc/nginx/sites-available/
+Path_nginx_conf = /etc/nginx/nginx.conf
 # Create directory for site
 sudo mkdir -p /var/www/$1/html
 sudo chown -R $USER:$USER /var/www/$1
