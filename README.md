@@ -76,4 +76,28 @@ sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/
 sudo apt install php-cli
 sudo apt install php-fpm
 
+cd /var/www/$1/html/index.html
+sudo wget https://wordpress.org/latest.tar.gz
+
+sudo nano /etc/php/8.1/fpm/pool.d/www.conf
+
+Reemplazar
+;listen = /var/run/php5-fpm.sock
+listen = 127.0.0.1:9000
+
+sudo apt-get install mysql-server
+
+MySQL, de forma predeterminada, ya no está vinculado (escuchando) a ninguna interfaz accesible de forma remota. Edite la directiva "bind-address" en /etc/mysql/mysql.conf.d/mysqld.cnf:
+
+bind-address = 127.0.0.1 ( The default. )
+bind-address = XXX.XXX.XXX.XXX ( The ip address of your Public Net interface. )
+bind-address = ZZZ.ZZZ.ZZZ.ZZZ ( The ip address of your Service Net interface. )
+bind-address = 0.0.0.0 ( All ip addresses. )
+
+sudo systemctl restart mysql
+
+sudo mysql
+
+CREATE USER 'audisoft'@'localhost' IDENTIFIED BY '123';
+GRANT ALL PRIVILEGES ON * . * TO 'audisoft'@'localhost';
 ```

@@ -33,7 +33,7 @@ sudo chown root:root $Path_available
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 
 sudo chown $USER:$USER $Path_nginx_conf
-echo "user www-data;"                                                            > $Path_nginx_conf
+echo "user www-data;"                                                           > $Path_nginx_conf
 echo "worker_processes auto;"                                                   >> $Path_nginx_conf
 echo "pid /run/nginx.pid;"                                                      >> $Path_nginx_conf
 echo "include /etc/nginx/modules-enabled/*.conf;"                               >> $Path_nginx_conf
@@ -54,7 +54,7 @@ echo "        tcp_nopush on;"                                                   
 echo "        types_hash_max_size 2048;"                                        >> $Path_nginx_conf
 echo "        # server_tokens off;"                                             >> $Path_nginx_conf
 echo ""                                                                         >> $Path_nginx_conf
-echo "        server_names_hash_bucket_size 64;"                              >> $Path_nginx_conf
+echo "        server_names_hash_bucket_size 64;"                                >> $Path_nginx_conf
 echo "        # server_name_in_redirect off;"                                   >> $Path_nginx_conf
 echo ""                                                                         >> $Path_nginx_conf
 echo "        include /etc/nginx/mime.types;"                                   >> $Path_nginx_conf
