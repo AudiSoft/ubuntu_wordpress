@@ -23,7 +23,8 @@ echo "        }"                                                                
 echo ""                                                                         >> /etc/nginx/sites-available/$1
 echo "        location ~ \.php$ {"                                              >> /etc/nginx/sites-available/$1
 echo "                include snippets/fastcgi-php.conf;"                       >> /etc/nginx/sites-available/$1
-echo "                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;"          >> /etc/nginx/sites-available/$1
+echo "                 #fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;"        >> /etc/nginx/sites-available/$1
+echo "                 fastcgi_pass 127.0.0.1:9000;"                            >> /etc/nginx/sites-available/$1
 echo "        }"                                                                >> /etc/nginx/sites-available/$1
 echo ""                                                                         >> /etc/nginx/sites-available/$1
 echo "        location ~ /\.ht {"                                               >> /etc/nginx/sites-available/$1
