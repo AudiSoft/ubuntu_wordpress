@@ -31,7 +31,7 @@ echo "        }"                                                   >> /etc/nginx
 echo "}"                                                           >> /etc/nginx/sites-available/$1
 sudo chown root:root /etc/nginx/sites-available/$1
 
-sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/
 
 
 echo "user www-data;"                                                           > /etc/nginx/nginx.conf
