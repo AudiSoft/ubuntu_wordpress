@@ -1,6 +1,6 @@
 #!/bin/bash
 # Define variables
-$Path_available = /etc/nginx/sites-available/$1
+$Path_available = /etc/nginx/sites-available/
 $Path_nginx_conf = /etc/nginx/nginx.conf
 # Create directory for site
 sudo mkdir -p /var/www/$1/html
@@ -8,27 +8,27 @@ sudo chown -R $USER:$USER /var/www/$1
 # Create index.html
 echo "<h1>Welcome to $1</h1>"> /var/www/$1/html/index.html
 # Create configuration file for site
-sudo touch $Path_available
-sudo chown $USER:$USER $Path_available
-echo "server {"                                                    >> $Path_available
-echo "        listen 80;"                                          >> $Path_available
-echo "        listen [::]:80;"                                     >> $Path_available
-echo ""                                                            >> $Path_available
-echo "        root /var/www/$1/html;"                              >> $Path_available
-echo "        index index.html index.htm index.nginx-debian.html;" >> $Path_available
-echo ""                                                            >> $Path_available
-echo "        server_name $1 www.$1;"                              >> $Path_available
-echo ""                                                            >> $Path_available
-echo "        location / {"                                        >> $Path_available
-echo "                try_files $uri $uri/ =404;"                  >> $Path_available
-echo "        }"                                                   >> $Path_available
-echo "        location ~ \.php$ {"                                 >> $Path_available
-echo "                include snippets/fastcgi-php.conf;"          >> $Path_available
-echo "           #fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;" >> $Path_available
-echo "		          fastcgi_pass 127.0.0.1:9000;"                >> $Path_available
-echo "        }"                                                   >> $Path_available
-echo "}"                                                           >> $Path_available
-sudo chown root:root $Path_available
+sudo touch $Path_available$1
+sudo chown $USER:$USER $Path_available$1
+echo "server {"                                                    >> $Path_available$1
+echo "        listen 80;"                                          >> $Path_available$1
+echo "        listen [::]:80;"                                     >> $Path_available$1
+echo ""                                                            >> $Path_available$1
+echo "        root /var/www/$1/html;"                              >> $Path_available$1
+echo "        index index.html index.htm index.nginx-debian.html;" >> $Path_available$1
+echo ""                                                            >> $Path_available$1
+echo "        server_name $1 www.$1;"                              >> $Path_available$1
+echo ""                                                            >> $Path_available$1
+echo "        location / {"                                        >> $Path_available$1
+echo "                try_files $uri $uri/ =404;"                  >> $Path_available$1
+echo "        }"                                                   >> $Path_available$1
+echo "        location ~ \.php$ {"                                 >> $Path_available$1
+echo "                include snippets/fastcgi-php.conf;"          >> $Path_available$1
+echo "           #fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;" >> $Path_available$1
+echo "		          fastcgi_pass 127.0.0.1:9000;"                >> $Path_available$1
+echo "        }"                                                   >> $Path_available$1
+echo "}"                                                           >> $Path_available$1
+sudo chown root:root $Path_available$1
 
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 
