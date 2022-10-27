@@ -120,8 +120,8 @@ sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/
 #echo "#       }"                                                                >> /etc/nginx/nginx.conf
 #echo "#}"                                                                       >> /etc/nginx/nginx.conf
 
-cd /var/www/$1/html/
-sudo wget https://wordpress.org/latest.tar.gz
-sudo tar -xzvf latest.tar.gz
-cd wordpress/
-sudo mv * /var/www/$1/html/
+#cd /var/www/$1/html/
+#sudo wget https://wordpress.org/latest.tar.gz
+#sudo tar -xzvf latest.tar.gz
+#cd wordpress/
+#sudo mv * /var/www/$1/html/
