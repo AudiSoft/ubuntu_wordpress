@@ -33,7 +33,7 @@ sudo chown root:root $Path_available$1
 
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 
-sudo chown $USER:$USER $Path_nginx_conf
+
 echo "user www-data;"                                                           > $Path_nginx_conf
 echo "worker_processes auto;"                                                   >> $Path_nginx_conf
 echo "pid /run/nginx.pid;"                                                      >> $Path_nginx_conf
@@ -117,4 +117,3 @@ echo "#               protocol   imap;"                                         
 echo "#               proxy      on;"                                           >> $Path_nginx_conf
 echo "#       }"                                                                >> $Path_nginx_conf
 echo "#}"                                                                       >> $Path_nginx_conf
-sudo chown root:root $Path_nginx_conf
