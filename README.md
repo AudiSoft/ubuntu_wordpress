@@ -64,9 +64,20 @@ git clone https://github.com/AudiSoft/ubuntu_wordpress.git
 # Allow scripts to run
 cd ubuntu_wordpress
 chmod 700 *.sh
+
+##Install all resources
+./install_resources
+
+##if you want to install the resources individually execute the following scripts
 # Install nginx
 ./install_nginx.sh
+#Install php
+./install_php.sh
+#Install mysql
+./install_mysql.sh
+
 # Create web sites
 ./create_site.sh audisoft.test
 ./create_site.sh henutsen.test
+
 ```
