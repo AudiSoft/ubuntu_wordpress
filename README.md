@@ -76,6 +76,9 @@ chmod 700 *.sh
 #Install mysql
 ./install_mysql.sh
 
+#create database 
+./create_db.sh
+
 # Create web sites
 ./create_site.sh audisoft.test
 ./create_site.sh henutsen.test

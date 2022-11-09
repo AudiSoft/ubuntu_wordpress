@@ -1,15 +1,9 @@
 #!/bin/bash
 # Install nginx server
-sudo apt install nginx
-# Get nginx version.
-nginx -v
+. install_nginx.sh
 # Install php
-sudo apt install php-fpm php-mysql
-# Get php version.
-php -v
+. install_php.sh
 # Install mysql server
-sudo apt install mysql-server
-# Get php version.
-mysql --version
+. install_mysql.sh
 
-pause
+sleep 20s
