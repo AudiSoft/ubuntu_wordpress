@@ -55,7 +55,7 @@ echo "pm.max_spare_servers = 3"                                                 
 sudo chown root:root /etc/php/8.1/fpm/pool.d/www.conf
 
 sudo systemctl reload nginx
-sudo service php5-fpm reload 
+sudo service php8.1-fpm reload 
 
 #cd /var/www/$1/html/
 #sudo wget https://wordpress.org/latest.tar.gz
