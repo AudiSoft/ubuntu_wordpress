@@ -66,7 +66,7 @@ cd ubuntu_wordpress
 chmod 700 *.sh
 
 ##Install all resources
-./install_resources
+./install_resources.sh
 
 ##if you want to install the resources individually execute the following scripts
 # Install nginx
@@ -75,6 +75,9 @@ chmod 700 *.sh
 ./install_php.sh
 #Install mysql
 ./install_mysql.sh
+
+#create database 
+./create_db.sh
 
 # Create web sites
 ./create_site.sh audisoft.test
