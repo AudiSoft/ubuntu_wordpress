@@ -35,7 +35,6 @@ echo "        }"                                                                
 echo "}"                                                                        >> /etc/nginx/sites-available/$1
 sudo chown root:root /etc/nginx/sites-available/$1
 sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/
-sudo unlink /etc/nginx/sites-enabled/default
 
 sudo chown $USER:$USER /etc/php/8.1/fpm/pool.d/www.conf
 echo "; Start a new pool named 'www'."                                                  >  /etc/php/8.1/fpm/pool.d/www.conf
@@ -57,9 +56,8 @@ sudo chown root:root /etc/php/8.1/fpm/pool.d/www.conf
 sudo systemctl reload nginx
 sudo service php8.1-fpm reload 
 
-#cd /var/www/$1/html/
-#sudo wget https://wordpress.org/latest.tar.gz
-#sudo tar -xzvf latest.tar.gz
-#cd wordpress/
-#sudo mv * /var/www/$1/html/
-#sudo mv * /var/www/sample1.test/html/
+cd /var/www/$1/html/
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xzvf latest.tar.gz
+cd wordpress/
+sudo mv * /var/www/$1/html/

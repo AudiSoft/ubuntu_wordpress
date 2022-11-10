@@ -66,7 +66,7 @@ cd ubuntu_wordpress
 chmod 700 *.sh
 
 ##Install all resources
-./install_resources
+./install_resources.sh
 
 ##if you want to install the resources individually execute the following scripts
 # Install nginx
